@@ -5,7 +5,8 @@
     },
     "extends": [
         "standard",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-tslint"
     ],
     "globals": {
         "Atomics": "readonly",
