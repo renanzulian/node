@@ -1,5 +1,5 @@
 import express from 'express'
-// import morgan from 'morgan'
+import morgan from 'morgan'
 import cors from 'cors'
 
 
@@ -15,7 +15,7 @@ class Express {
     }
 
     private middlewares(): void {
-        // this.application.use(morgan('dev'))
+        this.application.use(morgan('dev'))
         this.application.use(cors())
         this.application.use(express.urlencoded({ extended: false }))
         this.application.use(express.json())
