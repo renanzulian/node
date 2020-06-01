@@ -8,7 +8,6 @@ class Express {
 
     constructor() {
         this.application = express()
-
         this.middlewares()
         this.routes()
         this.exceptionHandler()
