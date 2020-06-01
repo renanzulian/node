@@ -1,4 +1,4 @@
-export interface UserState {
+export interface User {
     userId?: number
     privilegeId?: number
     name: string
@@ -8,8 +8,7 @@ export interface UserState {
     createdAt?: Date
     updatedAt?: Date
 }
-
-export default class User implements UserState {
+class UserDefault implements User {
     userId?: number
     privilegeId?: number
     name: string
@@ -19,14 +18,16 @@ export default class User implements UserState {
     createdAt?: Date
     updatedAt?: Date
 
-    constructor(user: UserState) {
-        this.userId = user.userId
-        this.privilegeId = user.privilegeId
-        this.name = user.name
-        this.email = user.email
-        this.password = user.password
-        this.createdBy = user.createdBy
-        this.createdAt = user.createdAt
-        this.updatedAt = user.updatedAt
+    constructor (user: User) {
+      this.userId = user.userId
+      this.privilegeId = user.privilegeId
+      this.name = user.name
+      this.email = user.email
+      this.password = user.password
+      this.createdBy = user.createdBy
+      this.createdAt = user.createdAt
+      this.updatedAt = user.updatedAt
     }
 }
+
+export default UserDefault
