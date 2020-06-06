@@ -1,7 +1,0 @@
-{
-    "ignore": ["__tests__"],
-    "ext": "ts",
-    "execMap": {
-        "ts": "sucrase-node bin/www/server.ts"
-    }
-}
