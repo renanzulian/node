@@ -26,6 +26,5 @@ describe('Authentication', () => {
 
     const tokenDecoded = auth.required(randomToken)
     expect(tokenDecoded).toBeInstanceOf(JsonWebTokenError)
-    expect(tokenDecoded).toBeFalsy()
   })
 })
