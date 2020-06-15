@@ -3,31 +3,31 @@ import morgan from 'morgan'
 import 'reflect-metadata'
 import cors from 'cors'
 
-class Express {
-    public application: express.Application
+class Application {
+    public server: express.Application
 
     constructor () {
-      this.application = express()
+      this.server = express()
       this.middlewares()
       this.routes()
       this.exceptionHandler()
     }
 
     private middlewares (): void {
-      this.application.use(morgan('dev'))
-      this.application.use(cors())
-      this.application.use(express.urlencoded({ extended: false }))
-      this.application.use(express.json())
+      this.server.use(morgan('dev'))
+      this.server.use(cors())
+      this.server.use(express.urlencoded({ extended: false }))
+      this.server.use(express.json())
     }
 
     private routes (): void {
-      this.application.use('/works', (req, res) => {
+      this.server.use('/works', (req, res) => {
         return res.status(200).send({ message: 'It works' })
       })
     }
 
     private exceptionHandler (): void {
-      this.application.use('*', (req, res) => {
+      this.server.use('*', (req, res) => {
         return res.status(404).send({
           message: 'Method does not found.'
         })
@@ -35,4 +35,4 @@ class Express {
     }
 }
 
-export default Express
+export default Application
