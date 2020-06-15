@@ -1,4 +1,4 @@
-import { User } from './user'
+import { User } from './user.model'
 class DataAccessLayerUser {
   public selectAllUsers ():User[] {
     throw new Error('It was not implemented yet')

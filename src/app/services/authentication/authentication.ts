@@ -5,7 +5,7 @@ class Authentication {
   private secret: String
 
   constructor (secret?: string) {
-    this.secret = secret || process.env.JWT_SECRET
+    this.secret = secret || String(process.env.JWT_SECRET)
   }
 
   public required (token: string): object {

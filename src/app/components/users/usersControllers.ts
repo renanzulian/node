@@ -1,4 +1,4 @@
-import { User } from './user'
+import { User } from './user.model'
 import DataAccessLayerUser from './usersDAL'
 
 class UserController {
