@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
 import { IsEmail, Min } from 'class-validator'
 
-@Entity()
+@Entity({ name: 'users' })
 export class User {
     @PrimaryGeneratedColumn()
     id: number
@@ -12,7 +12,7 @@ export class User {
     @Column()
     name: string
 
-    @Column()
+    @Column({ unique: true })
     @IsEmail()
     email: string
 
