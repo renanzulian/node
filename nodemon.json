@@ -1,7 +1,0 @@
-{
-    "ignore": ["__tests__"],
-    "ext": "ts",
-    "execMap": {
-        "ts": "ts-node src/bin/www/server.ts"
-    }
-}
